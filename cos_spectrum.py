@@ -10,10 +10,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 t_sim = 1
-fs = 10000
+fs = 100
 x = np.arange(0,t_sim,1/fs)
 
-y = np.sin(2*np.pi*100*x) + 0.5*np.cos(2*np.pi*50*x)
+y = np.sin(2*np.pi*10*x) + 0.5*np.cos(2*np.pi*5*x)
 yf = 20*np.log10(np.fft.fftshift(np.abs(np.fft.fft(y))))
 xf = np.arange(-1/(2*t_sim)*y.size, 1/(2*t_sim)*y.size, 1/(t_sim))
 
